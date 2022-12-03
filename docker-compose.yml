@@ -15,6 +15,6 @@ services:
     php:
         build:
             context: .
-            dockerfile: docker/nginx/Dockerfile
+            dockerfile: docker/php/Dockerfile
         volumes:
             - .:/app/
