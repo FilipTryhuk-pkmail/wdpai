@@ -76,3 +76,122 @@ input::placeholder {
         margin-right: 45%;
     }
 }
+
+.base-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(180deg, #277061 29.22%, #A4C61E 100%);
+
+}
+
+header  {
+    width: 100vw;
+    height: 20vw;
+}
+
+main {
+    width: 100vw;
+    height: 80vh;
+}
+
+.top_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.small_logo{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-size: 3em;
+    line-height: 2em;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    color: #B7E7E7;
+    margin-right: 3em;
+    white-space: nowrap;
+    margin-left: 0.5em;
+}
+
+.username {
+    background: #8F5E71;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    align-self: center;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1em;
+    white-space: nowrap;
+
+    margin-left: auto; 
+    margin-right: 1em;
+
+    color: #B7E7E7;
+}
+
+.selection_buttons{
+    background: #8F5E71;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    padding: 0.4em;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-align: center;
+
+    color: #B7E7E7;
+}
+
+section {
+    display: flex;
+    align-items: flex-start;
+}
+section h1 {
+    margin-left: 3em;
+    margin-top: 2em;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    color: #B7E7E7;
+
+    background: #8F5E71;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px 30px 30px 30px;
+    padding: 1em;
+}
+section h2 {
+    margin-left: 1em;
+    margin-right: 4em;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2em;
+    overflow: auto;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    color: #B7E7E7;
+
+    background: #8F5E71;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px 30px 30px 30px;
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
