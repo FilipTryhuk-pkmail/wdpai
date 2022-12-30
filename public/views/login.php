@@ -12,7 +12,16 @@
             <img src="public/img/logo_2.svg">
         </div>
         <div class="login-container">
-            <form>
+            <form class="login_2" action="login_2" method="POST">
+                <div class="message">
+                    <?php
+                        if(isset($messages)) {
+                            foreach ($messages as $message) {
+                                echo $message;
+                            }
+                        }
+                    ?>
+                </div>
                 <div class="login_info">
                     Log in to the site
                 </div>
@@ -40,7 +49,7 @@
                 margin-top: 0.25em;
                 color: rgba(0, 0, 0, 1);
             ">
-                <button>
+                <button type="submit">
                     <div class="button_text">
                         CONTINUE
                     </div>
