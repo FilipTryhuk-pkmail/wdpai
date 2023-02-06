@@ -48,6 +48,7 @@ button {
 
 .login_info {
     font-family: 'Ubuntu';
+    font-family: 'Ubuntu';
     font-style: normal;
     font-size: 2em;
     margin-left: 1em;
@@ -194,4 +195,15 @@ a {
 
 ul {
     list-style: none;
+}
+
+section.wishlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wishlist-> form {
+    display: flex;
+    flex-direction: row;
 }
