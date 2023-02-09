@@ -7,7 +7,7 @@ require_once "Repository.php";
 class UserRepository extends Repository
 {
     public function getUser(string $email): ?User {
-        $stmt = self::$database->connect()->prepare(
+        $stmt = UserRepository::$database->connect()->prepare(
             "SELECT * FROM public.users WHERE email = :email"
         );
         $stmt->bindParam(":email", $email, PDO::PARAM_STR);

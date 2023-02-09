@@ -1,5 +1,5 @@
 <?php
-
+//TODO: Repurpose as cover art upload controller
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Wishlist.php';
 
