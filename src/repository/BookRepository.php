@@ -31,4 +31,18 @@ class BookRepository extends Repository
         $stmt->execute([$book->getTitle(),$book->getAuthor(),$book->getPublishingDate()]);
     }
 
+    public function getBooks(): ?array {
+        $res = [];
+        $stmt = $this->database->connect()->prepare(
+            "SELECT * FROM public.books"
+        );
+        $stmt->execute();
+        $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($books as $book) {
+            $res[] = new Book($book["title"], $book["author"], $books["publishing_date"]);
+        }
+
+        return $res;
+    }
+
 }

@@ -10,6 +10,12 @@ class BookController extends AppController {
     private $messages = [];
     private $bookRepository;
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->bookRepository = new BookRepository();
+    }
+
     public function addBook() {
         //TODO: remove the singleton from Repository and display the new book
             $book = new Book($_POST["title"], $_POST["author"], $_POST["publishing_date"]);
@@ -17,5 +23,11 @@ class BookController extends AppController {
 
             $this->render('book', ['messages' => $this->messages, "book" => $book]);
     }
+
+    public function books() {
+        $books = $this->bookRepository->getBooks();
+        $this->render("books", ["books" => $books]);
+    }
+
 
 }
