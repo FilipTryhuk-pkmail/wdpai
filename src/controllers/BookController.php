@@ -10,12 +10,6 @@ class BookController extends AppController {
     private $messages = [];
     private $bookRepository;
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->bookRepository = BookRepository::getInstance();
-    }
-
     public function addBook() {
         //TODO: remove the singleton from Repository and display the new book
             $book = new Book($_POST["title"], $_POST["author"], $_POST["publishing_date"]);

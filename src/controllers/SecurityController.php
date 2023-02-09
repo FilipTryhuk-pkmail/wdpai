@@ -7,7 +7,7 @@ require_once __DIR__.'/../models/User.php';
 require_once __DIR__.'/../repository/UserRepository.php';
 class SecurityController extends AppController {
     public function login_2() {
-        $userRepository = UserRepository::getInstance();
+        $userRepository = new UserRepository();
 
         if($this->isGET()) {
             $this->render('login');

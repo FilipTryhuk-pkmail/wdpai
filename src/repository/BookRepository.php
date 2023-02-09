@@ -7,7 +7,7 @@ require_once "Repository.php";
 class BookRepository extends Repository
 {
     public function getBook(string $title): ?Book {
-        $stmt = BookRepository::$database->connect()->prepare(
+        $stmt = $this->database->connect()->prepare(
             "SELECT * FROM public.books WHERE title = :title"
         );
         $stmt->bindParam(":title", $title, PDO::PARAM_STR);
@@ -24,7 +24,7 @@ class BookRepository extends Repository
 
     }
     public function addBook(Book $book): void {
-        $stmt = BookRepository::$database->connect()->prepare(
+        $stmt = $this->database->connect()->prepare(
             "INSERT INTO public.books (title, author, publishing_date) VALUES (?,?,?)"
         );
 
