@@ -9,7 +9,7 @@ Routing::get('history', 'DefaultController');
 Routing::post('login_2', 'SecurityController');
 Routing::post('wishlist', 'WishlistController');
 Routing::post("books", "BookController");
-Routing::post("addBook", "BookController");
+Routing::post('register', 'SecurityController');
 
 Routing::run($path);
 
