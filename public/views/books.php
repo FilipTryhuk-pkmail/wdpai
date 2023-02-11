@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <script type="text/javascript" src="./public/js/search.ks/js" defer></script>
     <title>BOOKS</title>
 </head>
 
@@ -15,6 +16,9 @@
                 <div class="username">
                     Hello, user!
                 </div>
+            </div>
+            <div class="search-bar">
+                <input placeholder="Type to start searching">
             </div>
         </header>
         <main>
@@ -40,3 +44,11 @@
         </main>
     </div>
 </body>
+
+<template id="project_template">
+    <div>
+        <h2>title</h2>
+        <p>author</p>
+        <a>publishing_date</a>
+    </div>
+</template>

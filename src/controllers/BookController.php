@@ -17,7 +17,7 @@ class BookController extends AppController {
     }
 
     public function addBook() {
-        //TODO: remove the singleton from Repository and display the new book
+        //TODO: display the new book
             $book = new Book($_POST["title"], $_POST["author"], $_POST["publishing_date"]);
             $this->bookRepository->addBook($book);
 
@@ -29,5 +29,13 @@ class BookController extends AppController {
         $this->render("books", ["books" => $books]);
     }
 
-
+    public function search() {
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? $_SERVER["CONTENT_TYPE"] : "";
+        if($contentType === "application/json") {
+            $content = json_decode(trim(file_get_contents("php://input")), true);
+            header("Content-type: application/json");
+            http_response_code(200);
+            echo json_encode($this->bookRepository->getBookByTitle($content["search"]));
+        }
+    }
 }

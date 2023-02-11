@@ -41,8 +41,17 @@ class BookRepository extends Repository
         foreach ($books as $book) {
             $res[] = new Book($book["title"], $book["author"], $books["publishing_date"]);
         }
-
         return $res;
     }
 
+    public function getBookByTitle(string $keyword) {
+        $keyword = "%".strtolower($keyword)."%";
+
+        $stmt = $this->database->connect()->prepare(
+            "SELECT * FROM public.books WHERE LOWER(title) LIKE :search OR LOWER(author) LIKE :search"
+        );
+        $stmt->bindParam(":search", $keyword, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

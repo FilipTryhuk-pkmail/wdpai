@@ -10,6 +10,7 @@ Routing::post('login_2', 'SecurityController');
 Routing::post('wishlist', 'WishlistController');
 Routing::post("books", "BookController");
 Routing::post('register', 'SecurityController');
+Routing::post('search', 'BookController');
 
 Routing::run($path);
 
