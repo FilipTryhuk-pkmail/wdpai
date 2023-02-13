@@ -10,7 +10,7 @@ class SecurityController extends AppController {
     private $userRepository;
     public function __construct() {
         parent::__construct();
-        $userRepository = new UserRepository();
+        $this->userRepository = new UserRepository();
     }
 
     public function login_2() {
@@ -19,6 +19,7 @@ class SecurityController extends AppController {
         }
 
         $email = $_POST["email"];
+        //TODO: hash this
         $password = $_POST["password"];
 
         $user = $this->userRepository->getUser($email);
