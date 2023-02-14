@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/history.css">
     <title>HISTORY</title>
 </head>
 
@@ -19,36 +19,54 @@
         </header>
         <main>
             <div>
-                <ul>
+                <ul class="page_bar">
                     <li>
                         <a href="#" class="selection_buttons">My account</a>
+                    </li>
+                    <li>
                         <a href="#" class="selection_buttons">Collection</a>
+                    </li>
+                    <li>
                         <a href="#" class="selection_buttons">History</a>
+                    </li>
+                    <li>
                         <a href="#" class="selection_buttons">Wishlist</a>
                     </li>
                 </ul>
             </div>
             <div class="Hbox">
                 <section>
-                    <h1>
-                        <div>Show:</div>
-                        <div>last day</div>
-                        <div>last week</div>
-                        <div>last month</div>
-                        <div>last year</div>
-                        <div>all time</div>
-                    </h1>
-                <section>
-                    <h2>
-                        <div style="background: #256A72;">HISTORY</div>
-                        <div style="background: #256A72;">date0</div>
-                        <div>book1</div>
-                        <div>date1</div>
-                        <div>book2</div>
-                        <div>date2</div>
-                        <div>book2</div>
-                        <div>date2</div>
-                    </h2>
+                    <h2>Show:</h2>
+                    <div class="timeline">
+                    <a href="#" class="timeline_buttons">last day</a>
+                    <a href="#" class="timeline_buttons">last week</a>
+                    <a href="#" class="timeline_buttons">last month</a>
+                    <a href="#" class="timeline_buttons">last year</a>
+                    <a href="#" class="timeline_buttons">all time</a>
+                    </div>
+                </section>
+                <section class="history_display">
+                    <h2>HISTORY</h2>
+                    <section class="timeline_buttons">
+                        <p>author</p>
+                        <p>title</p>
+                        <p>date</p>
+                    </section>
+                    <section class="timeline_buttons">
+                        <p>author</p>
+                        <p>title</p>
+                        <p>date</p>
+                    </section>
+                    <section class="timeline_buttons">
+                        <p>author</p>
+                        <p>title</p>
+                        <p>date</p>
+                    </section>
+                    <section class="timeline_buttons">
+                        <p>author</p>
+                        <p>title</p>
+                        <p>date</p>
+                    </section>
                 </section>
             </div>
         </main>
