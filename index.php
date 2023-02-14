@@ -11,6 +11,6 @@ Routing::post('wishlist', 'WishlistController');
 Routing::post("books", "BookController");
 Routing::post('register', 'SecurityController');
 Routing::post('search', 'BookController');
-
+//TODO: logout and register
 Routing::run($path);
 
