@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/history.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/history.css">
     <title>HISTORY</title>
 </head>
 

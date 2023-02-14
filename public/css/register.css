@@ -18,6 +18,19 @@
 h1 {
     font-size: xx-large;
     text-align: center;
-    margin-block-start: 0em;
+    margin-block-start: 0;
     margin-block-end: 0.2em;
+}
+.register {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+.register>input {
+    padding: 0.4em;
+    border-radius: 30px 30px 30px 30px;
+    background: #8F5E71
+}
+.register>input::placeholder {
+    color: #B7E7E7;
 }

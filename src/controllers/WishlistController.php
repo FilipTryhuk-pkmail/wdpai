@@ -6,7 +6,7 @@ require_once __DIR__.'/../models/Wishlist.php';
 class WishlistController extends AppController {
     const MAX_FILE_SIZE = 1024*1024;
     const SUPPORTED_TYPES = ["image/png", "image/jpg", "image/gif"];
-    const UPLOAD_DIRECTORY = "/../public/uploads/";
+    const UPLOAD_DIRECTORY = "../../public/uploads/";
     private $messages = [];
     public function add_wishlist() {
         if($this->isPost() && is_uploaded_file($_FILES["file"]["tmp_name"]) && $this->validate($_FILES["file"])) {

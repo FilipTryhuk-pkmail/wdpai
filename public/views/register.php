@@ -25,10 +25,10 @@
                 }
                 ?>
             </div>
-            <input name="email" type="text" placeholder="email@email.com">
-            <input name="password" type="password" placeholder="password">
-            <input name="name" type="text" placeholder="name">
-            <input name="surname" type="text" placeholder="surname">
+            <input id="input_fields" name="email" type="text" placeholder="email@email.com">
+            <input id="input_fields" name="password" type="password" placeholder="password">
+            <input id="input_fields" name="name" type="text" placeholder="name">
+            <input id="input_fields" name="surname" type="text" placeholder="surname">
             <button type="submit">REGISTER</button>
         </form>
     </section>
