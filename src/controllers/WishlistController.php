@@ -1,5 +1,4 @@
 <?php
-//TODO: Repurpose as cover art upload controller
 use models\Wishlist;
 
 require_once 'AppController.php';
@@ -17,7 +16,7 @@ class WishlistController extends AppController {
 
             $this->render('wishlist', ['messages' => $this->messages, "wishlist" => $wishlist]);
         }
-        $this->render('sendList', ['messages' => $this->messages]);
+        $this->render('wishlist', ['messages' => $this->messages]);
     }
 
     public function wishlist() {
