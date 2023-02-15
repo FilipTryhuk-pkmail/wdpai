@@ -47,7 +47,7 @@ class SecurityController extends AppController {
         $name = $_POST["name"];
         $surname = $_POST["surname"];
 
-        $user = new User($email, $password, $name, $surname);
+        $user = new User($email, md5(md5($password)), $name, $surname);
         $this->userRepository->addUser($user);
         $this->render('login', ['messages' => ['You\'ve been successfully registered!']]);
     }
