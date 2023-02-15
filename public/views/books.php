@@ -51,6 +51,6 @@
     <div>
         <h2>title</h2>
         <p>author</p>
-        <a>publishing_date</a>
+        <p>publishing_date</p>
     </div>
 </template>

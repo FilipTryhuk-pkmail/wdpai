@@ -22,7 +22,7 @@
                 See you soon, {user_name}!
             </p>
         </div>
-        <a class="login_button" href="localhost:8080/login_2">
+        <a class="login_button" href="login_2">
             LOG IN
         </a>
     </section>

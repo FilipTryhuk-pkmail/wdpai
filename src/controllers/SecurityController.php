@@ -19,8 +19,7 @@ class SecurityController extends AppController {
         }
 
         $email = $_POST["email"];
-        //TODO: hash this
-        $password = $_POST["password"];
+        $password = md5(md5($_POST["password"]));
 
         $user = $this->userRepository->getUser($email);
         if(!$user) {
@@ -35,7 +34,6 @@ class SecurityController extends AppController {
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: $url/history");
-//        return $this->render('history');
     }
 
     public function register()
