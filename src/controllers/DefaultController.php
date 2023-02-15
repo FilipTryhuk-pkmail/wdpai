@@ -10,4 +10,8 @@ class DefaultController extends AppController {
     public function history() {
         $this->render('history');
     }
+
+    public function logout() {
+        $this->render('logout');
+    }
 }

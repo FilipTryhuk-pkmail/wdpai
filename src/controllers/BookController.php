@@ -17,7 +17,6 @@ class BookController extends AppController {
     }
 
     public function addBook() {
-        //TODO: display the new book
             $book = new Book($_POST["title"], $_POST["author"], $_POST["publishing_date"]);
             $this->bookRepository->addBook($book);
 

@@ -19,8 +19,7 @@ class SecurityController extends AppController {
         }
 
         $email = $_POST["email"];
-        //TODO: hash this
-        $password = $_POST["password"];
+        $password = md5(md5($_POST["password"]));
 
         $user = $this->userRepository->getUser($email);
         if(!$user) {
@@ -35,7 +34,6 @@ class SecurityController extends AppController {
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: $url/history");
-//        return $this->render('history');
     }
 
     public function register()
@@ -49,7 +47,7 @@ class SecurityController extends AppController {
         $name = $_POST["name"];
         $surname = $_POST["surname"];
 
-        $user = new User($email, $password, $name, $surname);
+        $user = new User($email, md5(md5($password)), $name, $surname);
         $this->userRepository->addUser($user);
         $this->render('login', ['messages' => ['You\'ve been successfully registered!']]);
     }
