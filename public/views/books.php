@@ -19,16 +19,16 @@
         <div>
             <ul class="page_bar">
                 <li>
-                    <a href="#" class="selection_buttons">My account</a>
+                    <a href="logout" class="selection_buttons">Log out</a>
                 </li>
                 <li>
-                    <a href="#" class="selection_buttons">Collection</a>
+                    <a href="books" class="selection_buttons">Collection</a>
                 </li>
                 <li>
-                    <a href="#" class="selection_buttons">History</a>
+                    <a href="history" class="selection_buttons">History</a>
                 </li>
                 <li>
-                    <a href="#" class="selection_buttons">Wishlist</a>
+                    <a href="cover_upload" class="selection_buttons">Upload</a>
                 </li>
             </ul>
         </div>

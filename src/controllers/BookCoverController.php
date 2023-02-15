@@ -1,10 +1,10 @@
 <?php
-use models\Wishlist;
+use models\BookCover;
 
 require_once 'AppController.php';
-require_once __DIR__.'/../models/Wishlist.php';
+require_once __DIR__ . '/../models/BookCover.php';
 
-class WishlistController extends AppController {
+class BookCoverController extends AppController {
     const MAX_FILE_SIZE = 1024*1024;
     const SUPPORTED_TYPES = ["image/png", "image/jpg", "image/gif"];
     const UPLOAD_DIRECTORY = "../../public/uploads/";
@@ -12,15 +12,15 @@ class WishlistController extends AppController {
     public function add_wishlist() {
         if($this->isPost() && is_uploaded_file($_FILES["file"]["tmp_name"]) && $this->validate($_FILES["file"])) {
             move_uploaded_file($_FILES["file"]["tmp_name"], dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES["file"]["tmp_name"]);
-            $wishlist = new Wishlist($_POST["title"], $_POST["description"], $_FILES["file"]["tmp_name"]);
+            $bookcover = new BookCover($_POST["title"], $_POST["description"], $_FILES["file"]["tmp_name"]);
 
-            $this->render('wishlist', ['messages' => $this->messages, "wishlist" => $wishlist]);
+            $this->render('bookcover', ['messages' => $this->messages, "wishlist" => $bookcover]);
         }
-        $this->render('wishlist', ['messages' => $this->messages]);
+        $this->render('bookcover', ['messages' => $this->messages]);
     }
 
-    public function wishlist() {
-        $this->render('wishlist');
+    public function cover_upload() {
+        $this->render('bookcover');
     }
 
     private function validate(array $file) : bool {

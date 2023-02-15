@@ -2,7 +2,7 @@
 
 namespace models;
 
-class Wishlist {
+class BookCover {
     private $title;
     private $description;
     private $list;
