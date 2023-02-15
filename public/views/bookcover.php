@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../../public/css/history.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/book_cover.css">
-    <title>WISHLIST</title>
+    <title>BOOKCOVER</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
         </div>
             <section class="upload_form">
                 <h1>UPLOAD</h1>
-                <form action="../../src/controllers/BookCoverController.php" method="POST" ENCTYPE="multipart/form-data">
+                <form action="add_cover" method="POST" ENCTYPE="multipart/form-data">
                     <?php
                     if(isset($messages)) {
                         foreach ($messages as $message) {

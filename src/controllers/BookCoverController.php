@@ -6,15 +6,15 @@ require_once __DIR__ . '/../models/BookCover.php';
 
 class BookCoverController extends AppController {
     const MAX_FILE_SIZE = 1024*1024;
-    const SUPPORTED_TYPES = ["image/png", "image/jpg", "image/gif"];
-    const UPLOAD_DIRECTORY = "../../public/uploads/";
+    const SUPPORTED_TYPES = ["image/png", "image/PNG", "image/jpg", "image/gif"];
+    const UPLOAD_DIRECTORY = "/../public/uploads/";
     private $messages = [];
-    public function add_wishlist() {
+    public function add_cover() {
         if($this->isPost() && is_uploaded_file($_FILES["file"]["tmp_name"]) && $this->validate($_FILES["file"])) {
-            move_uploaded_file($_FILES["file"]["tmp_name"], dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES["file"]["tmp_name"]);
-            $bookcover = new BookCover($_POST["title"], $_POST["description"], $_FILES["file"]["tmp_name"]);
+            move_uploaded_file($_FILES["file"]["tmp_name"], dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES["file"]["name"]);
+            $bookcover = new BookCover($_POST["title"], $_POST["description"], $_FILES["file"]["name"]);
 
-            $this->render('bookcover', ['messages' => $this->messages, "wishlist" => $bookcover]);
+            $this->render('bookcover', ['messages' => $this->messages, "bookcover" => $bookcover]);
         }
         $this->render('bookcover', ['messages' => $this->messages]);
     }

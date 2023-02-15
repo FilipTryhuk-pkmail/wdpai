@@ -8,6 +8,7 @@ Routing::get('login', 'DefaultController');
 Routing::get('history', 'DefaultController');
 Routing::post('login_2', 'SecurityController');
 Routing::post('cover_upload', 'BookCoverController');
+Routing::post('add_cover', 'BookCoverController');
 Routing::post("books", "BookController");
 Routing::post('register', 'SecurityController');
 Routing::post('search', 'BookController');
