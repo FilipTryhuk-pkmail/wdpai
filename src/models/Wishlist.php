@@ -2,8 +2,7 @@
 
 namespace models;
 
-class Wishlist
-{
+class Wishlist {
     private $title;
     private $description;
     private $list;
@@ -18,27 +17,21 @@ class Wishlist
     public function getTitle(): string {
         return $this->title;
     }
-
-    public function setTitle(string $title)
-    {
+    public function setTitle(string $title) {
         $this->title = $title;
     }
 
     public function getDescription(): string {
         return $this->description;
     }
-
-    public function setDescription(string $description)
-    {
+    public function setDescription(string $description) {
         $this->description = $description;
     }
 
     public function getList(): string {
         return $this->list;
     }
-
-    public function setList(string $list)
-    {
+    public function setList(string $list) {
         $this->list = $list;
     }
 }
